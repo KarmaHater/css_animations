@@ -12,6 +12,10 @@
   background-color: pink;
 }
 
+.purple {
+  background-color: purple;
+}
+
 img { 
   margin: 25px;
 }
@@ -38,6 +42,14 @@ img {
   -webkit-animation-direction: reverse;
 }
 
+.pic_3 {
+  outline: 2px solid pink;
+  -webkit-animation-name: loop;
+  -webkit-animation-duration: 25s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
 @-webkit-keyframes move-left-right {
   0% {-webkit-transform: translateX(100px);}
   20% {-webkit-transform: translateX(-10px);}
@@ -48,5 +60,11 @@ img {
   form {-webkit-transform: translateX(0px);}
   to {-webkit-transform: translateX(500px);}
 }
+
+@-webkit-keyframes loop {
+  form {-webkit-transform: translateX(-150px);}
+  to {-webkit-transform: translateX(500px);}
+}
+
 
 /*these are only chrome vendor prefixes have to go and add them for other browsers.*/
