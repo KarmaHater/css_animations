@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.pink {
+  background-color: pink;
+}
+
+img { 
+  margin: 25px;
+}
+
+.pic_1 {
+  position: relative;
+  left: 20px;
+  -webkit-animation-name: move-left-right;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: both; /*keeps animation to the left*/
+}
+
+.pic_2 {
+  position: relative;
+  left: 20px;
+  -webkit-animation-name: move-right;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; /*keeps animation to the left*/
+  -webkit-animation-direction: reverse;
+}
+
+@-webkit-keyframes move-left-right {
+  0% {-webkit-transform: translateX(100px);}
+  20% {-webkit-transform: translateX(-10px);}
+  100% {-webkit-transform: translateX(500px);}
+}
+
+@-webkit-keyframes move-right {
+  form {-webkit-transform: translateX(0px);}
+  to {-webkit-transform: translateX(500px);}
+}
+
+/*these are only chrome vendor prefixes have to go and add them for other browsers.*/
