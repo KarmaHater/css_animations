@@ -44,24 +44,45 @@ img {
 
 .pic_3 {
   outline: 2px solid pink;
-  -webkit-animation: loop 25s linear infinite;
-/*  shorthand name duration timing-function delay count direction*/
+  -webkit-animation: loop 25s linear 2s infinite;
+/*  shorthand name duration timing-function delay count direction fill-mode*/
+/*-webkit-animation: loop 25s linear 2s infinite backwards;*/
+}
+
+.button {
+  height: 150px;
+  width: 150px;
+  content: "";
+  -webkit-animation: color-change 3s ease infinite alternate;
+  -webkit-animation-play-state: paused;
+}
+
+/*button will change colors only when hovered*/
+.button:hover {
+  -webkit-animation-play-state: running;
 }
 
 @-webkit-keyframes move-left-right {
-  0% {-webkit-transform: translateX(100px);}
+  0% {-webkit-transform: translateX(100px); }
   20% {-webkit-transform: translateX(-10px);}
   100% {-webkit-transform: translateX(500px);}
 }
 
 @-webkit-keyframes move-right {
   form {-webkit-transform: translateX(0px);}
-  to {-webkit-transform: translateX(500px);}
+  to {-webkit-transform: translateX(500px);opacity: 0;}
 }
 
 @-webkit-keyframes loop {
   form {-webkit-transform: translateX(-150px);}
   to {-webkit-transform: translateX(500px);}
+}
+
+@-webkit-keyframes color-change {
+  0%{background-color: red;}
+  20%{background-color: orange;}
+  70%{background-color: pink;}
+  100%{background-color: blue;}
 }
 
 
