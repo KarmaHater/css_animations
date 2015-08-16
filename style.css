@@ -44,10 +44,8 @@ img {
 
 .pic_3 {
   outline: 2px solid pink;
-  -webkit-animation-name: loop;
-  -webkit-animation-duration: 25s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
+  -webkit-animation: loop 25s linear infinite;
+/*  shorthand name duration timing-function delay count direction*/
 }
 
 @-webkit-keyframes move-left-right {
